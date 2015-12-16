@@ -1,7 +1,7 @@
 		
 		// Loads Video and pauses before plays						
 		
-		
+		window.URL = window.URL || window.webkitURL;
 					
 					
 					displayMessage = (function displayMessageInit() {
@@ -41,7 +41,7 @@
 												return;
 											}
 
-											var fileURL = URL.createObjectURL(file);
+											var fileURL = window.URL.createObjectURL(file);
 
 											videoNode.src = fileURL;
 											
@@ -52,8 +52,10 @@
 											inputNode4 = document.querySelector('#videoControls');
 											inputNode4.addEventListener('ended', unloadVideo, false);
 											inputNode4.addEventListener('error', unloadVideo, false);
+											inputNode4.addEventListener('ended', exitTheFullscreen, false);
 
 											function unloadVideo() {
+											
 											videoNode.src = '';
 											videoNode.load();
 											}
@@ -117,6 +119,24 @@
 		  }
 		  
 		}
+		
+		
+		// Eixt video fullscreen. Find the right method, call on correct element
+		
+		function exitTheFullscreen() {
+				
+				if (document.exitFullscreen) {
+				document.exitFullscreen();
+				} else if (document.webkitExitFullscreen) {
+				document.webkitExitFullscreen();
+				} else if (document.mozCancelFullScreen) {
+				document.mozCancelFullScreen();
+				} else if (document.msExitFullscreen) {
+				document.msExitFullscreen();
+				}
+		  
+		}
+		
 		
 		// Video file inputs. Push search icon to open file browser then put title of file selected in text input adjacent to it.						
 		$(document).on('change', '.btn-file :file', function() {
