@@ -51,6 +51,7 @@
 
 											inputNode4 = document.querySelector('#videoControls');
 											inputNode4.addEventListener('ended', unloadVideo, false);
+											inputNode4.addEventListener('error', unloadVideo, false);
 
 											function unloadVideo() {
 											videoNode.src = '';
