@@ -48,6 +48,14 @@
 											
 											
 											videoNode.pause();
+
+											inputNode4 = document.querySelector('#videoControls');
+											inputNode4.addEventListener('ended', unloadVideo, false);
+
+											function unloadVideo() {
+											videoNode.src = '';
+											videoNode.load();
+											}
 									
 									}
 									
@@ -64,7 +72,7 @@
 					inputNode3 = document.querySelector('#playVid3');
 					inputNode3.addEventListener('click', playSelectedFileInit('#fileInput3', false));
 
-				
+					
 				
 		
 		
