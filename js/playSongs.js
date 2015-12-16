@@ -20,7 +20,7 @@
 										
 										// Show the user which song is now playing
 										var nowPlayingNumber = document.getElementById(idInputList).value;
-										document.getElementById(idNowPlaying).innerHTML = "Now Playing Song Number: " + nowPlayingNumber;
+										document.getElementById(idNowPlaying).innerHTML = "Now Playing: " + nowPlayingNumber;
 										
 										// Tests the current state of audio play and play or pause depending on whether audio is already playing or hasn't started yet
 										if (oAudio.paused) {
