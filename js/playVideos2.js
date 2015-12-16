@@ -50,9 +50,10 @@
 											videoNode.pause();
 
 											inputNode4 = document.querySelector('#videoControls');
+											inputNode4.addEventListener('ended', exitTheFullscreen, false);
 											inputNode4.addEventListener('ended', unloadVideo, false);
 											inputNode4.addEventListener('error', unloadVideo, false);
-											inputNode4.addEventListener('ended', exitTheFullscreen, false);
+											
 
 											function unloadVideo() {
 											
@@ -133,6 +134,8 @@
 				document.mozCancelFullScreen();
 				} else if (document.msExitFullscreen) {
 				document.msExitFullscreen();
+				} else if (element.webkitSupportsFullscreen) {
+				element.webkitExitFullscreen();
 				}
 		  
 		}
