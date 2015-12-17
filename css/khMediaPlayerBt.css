@@ -72,6 +72,10 @@ h1 {
    
 }
 
+#play, #play2, #play3 {
+    min-width: 175px;
+}
+
 .audioControlsBox {
     padding: 15px;
     margin-top:5px;
@@ -80,6 +84,7 @@ h1 {
     background: #FFFFFF;
     border: 1px solid #ccc;
     border-radius: 5px;
+	text-align: center;
 }
 
 .audioControlsBoxInfo {
@@ -88,6 +93,7 @@ h1 {
 
 .audioControlsBoxInfo p {
     text-align: center;
+	border-bottom: 1px solid #E5E5E5;
 }
 
 .nowPlaying {padding:15px;}
@@ -256,4 +262,17 @@ button.launchFullscreen {
 input[readonly] {
   background-color: white !important;
   cursor: text !important;
+}
+
+.browseBtn {
+    margin-top: -15px;
+}
+
+input[type=number] {-moz-appearance: textfield;}
+::-webkit-inner-spin-button { -webkit-appearance: none;}
+::-webkit-outer-spin-button { -webkit-appearance: none;}
+::-ms-clear {
+  width : 0;
+  height: 0;
+  display:none;
 }
