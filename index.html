@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -38,7 +38,7 @@
 							
 								<span class="input-group-btn">
 									<button class="btn btn-default" id="resetInputField" type="button" onClick="document.getElementById('mylist').value='';">X</button>
-									<button id="play" class="btn btn-default" type="button" onClick="playAudio('play', 'nowPlayingNumber', 'mylist', 'myaudio');"><img class="icon-play" src="img/play2.png" />Play</button>
+									<button id="play" class="btn btn-default" type="button" onClick="playAudio('play', 'nowPlayingNumber', 'mylist', 'myaudio');"><img class="icon-play" src="img/play2.png" alt="imgPlay" />Play</button>
 								</span>
 								
 							</div>
@@ -62,7 +62,7 @@
 							
 								<span class="input-group-btn">
 									<button class="btn btn-default" id="resetInputField2" type="button" onClick="document.getElementById('mylist2').value='';">X</button>
-									<button id="play2" class="btn btn-default" type="button" onClick="playAudio('play2', 'nowPlayingNumber2', 'mylist2', 'myaudio2');"><img class="icon-play" src="img/play2.png" />Play</button>
+									<button id="play2" class="btn btn-default" type="button" onClick="playAudio('play2', 'nowPlayingNumber2', 'mylist2', 'myaudio2');"><img class="icon-play" src="img/play2.png" alt="imgPlay" />Play</button>
 								</span>
 								
 							</div>
@@ -82,7 +82,7 @@
 							
 								<span class="input-group-btn">
 									<button class="btn btn-default" id="resetInputField3" type="button" onClick="document.getElementById('mylist3').value='';">X</button>
-									<button id="play3" class="btn btn-default" type="button" onClick="playAudio('play3', 'nowPlayingNumber3', 'mylist3', 'myaudio3');"><img class="icon-play" src="img/play2.png" />Play</button>
+									<button id="play3" class="btn btn-default" type="button" onClick="playAudio('play3', 'nowPlayingNumber3', 'mylist3', 'myaudio3');"><img class="icon-play" src="img/play2.png" alt="imgPlay"/>Play</button>
 								</span>
 								
 							</div>
@@ -254,7 +254,7 @@
 							</div>
 			
 							<div id="message" style="display:none;"></div>
-							<video id="videoControls"  controls ></video>
+							<video id="videoControls"  controls="controls" poster="img/50.png" x-webkit-airplay="allow"></video>
 							
 
 						</div>

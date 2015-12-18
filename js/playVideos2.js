@@ -20,6 +20,8 @@
 									
 									
 									return function (event) {
+									
+											var file = "";
 												
 											var file = $(idFileInput)[0].files[0];
 
@@ -49,17 +51,13 @@
 											
 											videoNode.pause();
 
-											inputNode4 = document.querySelector('#videoControls');
-											inputNode4.addEventListener('ended', exitTheFullscreen, false);
-											inputNode4.addEventListener('ended', unloadVideo, false);
-											inputNode4.addEventListener('error', unloadVideo, false);
+											//inputNode4 = document.querySelector('#videoControls');
+											//inputNode4.addEventListener('ended', exitTheFullscreen, false);
+											//inputNode4.addEventListener('ended', unloadVideo, false);
+											//inputNode4.addEventListener('error', unloadVideo, false);
 											
 
-											function unloadVideo() {
 											
-											videoNode.src = '';
-											videoNode.load();
-											}
 									
 									}
 									
@@ -164,5 +162,9 @@
 				});
 		});
 						
-		
-	
+					//keep for a bit
+					function unloadVideo() {
+					
+					videoNode.src = '';
+					videoNode.load();
+					}
