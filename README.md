@@ -18,4 +18,6 @@ I'm thinking it has to do with iOS wanting to load the complete video file into 
 
 Song selecting, after having selected songs, sometimes switching apps and returning to the song player causes the page to 'refresh' thus losing the song numbers that were chosen beforehand by the user.
 
+Background Music - for some reason stopped working. plays but doesn't move to next song.
+
 
