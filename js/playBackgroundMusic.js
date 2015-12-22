@@ -9,7 +9,9 @@
 					var files = [
 					"assets/music/1.mp3",
 					"assets/music/2.mp3",
-					"assets/music/3445.mp3"
+					"assets/music/135.mp3",
+					"assets/music/128.mp3",
+					"assets/music/140.mp3"
 					];
 
 					// Current index of the files array
@@ -42,24 +44,25 @@
 					// Listen for the playback erro event, skip, and play the next media in playlist array
 					playlistPlayer.addEventListener('error', next, false);
 			
-				
+					// Selects the next file to be played
+					function next() {
+						// Check for last media in the playlist
+						if (current === files.length - 1) {
+							current = 0;
+							} else {
+							current++;
+							};
+							// Change the audio element source
+							playlistPlayer.src = files[current];
+							
+							playlistPlayer.play();
+					}
+			
 				
 			}
 				
 				
-			// Selects the next file to be played
-			function next() {
-				// Check for last media in the playlist
-				if (current === files.length - 1) {
-					current = 0;
-					} else {
-					current++;
-					};
-					// Change the audio element source
-					playlistPlayer.src = files[current];
-					
-					playlistPlayer.play();
-			}
+			
 
 			
 			
